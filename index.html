@@ -1665,40 +1665,42 @@
     /* --- STYLE SPÉCIAL MOBILE (Version Finale Complète) --- */
     @media (max-width: 768px) {
         
-        /* 1. OPTIMISATION BARRE SUPÉRIEURE (RBQ & CONTACT) */
+        /* 1. OPTIMISATION BARRE SUPÉRIEURE (Alignement Symétrique) */
         .top-bar {
             background-color: #000 !important;
-            padding: 8px 0 !important;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.3) !important;
+            padding: 12px 0 !important;
+            text-align: center !important; /* Centre tout le texte */
         }
 
         .top-bar .container {
             display: flex !important;
             flex-direction: column !important;
+            justify-content: center !important;
             align-items: center !important;
-            gap: 4px !important;
+            gap: 8px !important; /* Espace constant entre la licence et les contacts */
+            width: 100% !important;
         }
 
         .rbq-info {
-            font-size: 10px !important;
-            letter-spacing: 1.5px !important;
-            text-transform: uppercase !important;
-            color: #d4af37 !important; /* Or Alix Rénovation */
-            font-weight: 700 !important;
+            font-size: 11px !important;
+            letter-spacing: 1px !important;
+            color: #d4af37 !important;
+            display: block !important;
+            width: 100% !important;
         }
 
         .top-contact {
             display: flex !important;
-            flex-direction: row !important;
-            gap: 12px !important;
-            font-size: 10.5px !important;
-            color: #ffffff !important;
-            opacity: 0.8;
+            flex-direction: column !important; /* On met un par ligne pour que ce soit bien droit */
+            gap: 4px !important;
+            font-size: 11px !important;
+            width: 100% !important;
         }
 
         .top-contact a {
+            display: block !important;
             color: #ffffff !important;
-            text-decoration: none !important;
+            opacity: 0.9;
         }
 
         /* 2. ALLÉGEMENT DE L'ACCUEIL (HERO) */
