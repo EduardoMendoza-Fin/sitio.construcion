@@ -733,7 +733,7 @@
         .testimonials-track {
             display: flex;
             gap: 2rem;
-            animation: scroll 80s linear infinite;
+            animation: scroll 120s linear infinite;
             width: max-content;
         }
 
@@ -1646,7 +1646,7 @@
             }
         });
 
-        // Smooth scroll
+       // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -1660,5 +1660,19 @@
             });
         });
     </script>
+
+    <style>
+        @media (max-width: 768px) {
+            .portfolio-overlay {
+                opacity: 1 !important; /* Force le texte à être toujours visible sur mobile */
+                background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 60%, transparent 100%); /* Fond sombre pour la lisibilité */
+                padding-bottom: 30px; /* Un peu plus d'espace en bas */
+            }
+            
+            .portfolio-item {
+                margin-bottom: 25px; /* Sépare bien les projets les uns des autres */
+            }
+        }
+    </style>
 </body>
 </html>
