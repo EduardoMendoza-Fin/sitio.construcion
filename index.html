@@ -1671,6 +1671,26 @@
             
             .portfolio-item {
                 margin-bottom: 25px; /* Sépare bien les projets les uns des autres */
+/* CORRECTIF MOBILE POUR TÉMOIGNAGES */
+        @media (max-width: 768px) {
+            .testimonial-card {
+                /* Au lieu d'une taille fixe en pixels, on utilise un % de l'écran */
+                min-width: 85vw !important;  /* La carte prendra 85% de la largeur du téléphone */
+                width: 85vw !important;      /* Force la largeur à s'adapter */
+                margin-right: 15px !important; /* Réduit l'espace entre les cartes */
+                padding: 1.5rem !important;    /* Un peu moins de vide à l'intérieur de la carte */
+                white-space: normal !important; /* Assure que le texte va à la ligne */
+            }
+
+            /* Optionnel : Si le texte est encore trop gros */
+            .testimonial-card p {
+                font-size: 0.9rem !important; /* Réduit légèrement la police */
+                line-height: 1.4 !important;
+            }
+            
+            /* Ajustement du conteneur pour éviter que ça coupe bizarrement */
+            .testimonials-track {
+                padding-left: 10px; /* Un peu d'espace au début */
             }
         }
     </style>
