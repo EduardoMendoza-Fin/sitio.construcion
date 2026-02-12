@@ -1662,35 +1662,39 @@
     </script>
 
     <style>
+        /* --- STYLE SPÉCIAL MOBILE (Corrigé) --- */
         @media (max-width: 768px) {
+            
+            /* 1. FIX PROJETS (Texte toujours visible) */
             .portfolio-overlay {
-                opacity: 1 !important; /* Force le texte à être toujours visible sur mobile */
-                background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 60%, transparent 100%); /* Fond sombre pour la lisibilité */
-                padding-bottom: 30px; /* Un peu plus d'espace en bas */
+                opacity: 1 !important; 
+                background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 60%, transparent 100%);
+                padding-bottom: 30px;
             }
             
             .portfolio-item {
-                margin-bottom: 25px; /* Sépare bien les projets les uns des autres */
-/* CORRECTIF MOBILE POUR TÉMOIGNAGES */
-        @media (max-width: 768px) {
-            .testimonial-card {
-                /* Au lieu d'une taille fixe en pixels, on utilise un % de l'écran */
-                min-width: 85vw !important;  /* La carte prendra 85% de la largeur du téléphone */
-                width: 85vw !important;      /* Force la largeur à s'adapter */
-                margin-right: 15px !important; /* Réduit l'espace entre les cartes */
-                padding: 1.5rem !important;    /* Un peu moins de vide à l'intérieur de la carte */
-                white-space: normal !important; /* Assure que le texte va à la ligne */
+                margin-bottom: 25px;
             }
 
-            /* Optionnel : Si le texte est encore trop gros */
+            /* 2. FIX TÉMOIGNAGES (Taille adaptée) */
+            .testimonial-card {
+                min-width: 85vw !important;   /* Prend 85% de la largeur de l'écran */
+                width: 85vw !important;
+                max-width: 85vw !important;   /* Empêche de dépasser */
+                margin-right: 15px !important;
+                padding: 1.5rem !important;
+                white-space: normal !important; /* Force le texte à aller à la ligne */
+                height: auto !important;      /* Laisse la carte grandir en hauteur si le texte est long */
+            }
+
             .testimonial-card p {
-                font-size: 0.9rem !important; /* Réduit légèrement la police */
+                font-size: 0.95rem !important; /* Texte légèrement plus petit pour bien entrer */
                 line-height: 1.4 !important;
             }
             
-            /* Ajustement du conteneur pour éviter que ça coupe bizarrement */
             .testimonials-track {
-                padding-left: 10px; /* Un peu d'espace au début */
+                padding-left: 10px;
+                gap: 15px; /* Espace réduit entre les cartes */
             }
         }
     </style>
